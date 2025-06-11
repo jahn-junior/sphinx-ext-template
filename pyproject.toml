@@ -64,7 +64,7 @@ namespaces = false
 
 [tool.codespell]
 ignore-words-list = "buildd,crate,keyserver,comandos,ro,dedent,dedented"
-skip = ".tox,.git,build,.*_cache,__pycache__,*.tar,*.snap,*.png,./node_modules,./docs/_build,.direnv,.venv,venv,.vscode"
+skip = ".tox,.git,build,.*_cache,__pycache__,*.tar,*.snap,*.png,./node_modules,.direnv,.venv,venv,.vscode"
 quiet-level = 3
 check-filenames = true
 
@@ -127,7 +127,6 @@ strict = false
 line-length = 88
 target-version = "py310"
 src = ["hello_ext", "tests"]
-extend-exclude = ["docs"]
 
 [tool.ruff.format]
 docstring-code-format = true
