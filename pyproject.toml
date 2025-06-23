@@ -7,7 +7,7 @@ dependencies = [
     "docutils>=0.21.2",
     "sphinx~=7.0",
 ]
-license = "GPL-3.0-or-later"
+license = "GPL-3.0"
 
 [dependency-groups]
 lint = [
