@@ -1,7 +1,5 @@
 """Contains the extension's directive."""
 
-from __future__ import annotations
-
 from docutils import nodes
 from sphinx.util.docutils import SphinxDirective
 
