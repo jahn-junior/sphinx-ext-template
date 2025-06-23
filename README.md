@@ -1,17 +1,17 @@
-# Canonical Sphinx extension template
+# hello-ext
 
 lorem ipsum
 
-## Create a new extension
+## Basic usage
 
 lorem ipsum
 
-## Migrate an existing extension
+## Installation
 
 lorem ipsum
 
 ## License and copyright
 
-This template is released under the [GPL-3.0 license](LICENSE)
+This template is released under the [GPL-3.0 license](LICENSE).
 
-© 2023-2025 Canonical Ltd.
+© 2025 Canonical Ltd.
