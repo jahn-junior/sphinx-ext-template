@@ -59,6 +59,20 @@ make test-coverage
 
 Once everything passes, the extension's migration is complete.
 
+## Publishing
+
+To publish your extension, you'll first need to configure trusted publishing on PyPI by
+following [these
+instructions](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/#configuring-trusted-publishing).
+
+Once that's done, GitHub actions will pack the extension and publish it to PyPI whenever
+you push a [semantic versioning](https://semver.org/) tag.
+
+```bash
+git tag -s -m "Release 1.2.3" "1.2.3"
+git push --tags
+```
+
 ## License and copyright
 
 This template is released under the [GPL-3.0 license](LICENSE).
