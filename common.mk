@@ -1,6 +1,3 @@
-# Common items for all Starcraft Makefiles. Should only be edited in the `starbase` repository:
-# https://github.com/canonical/starbase
-
 SOURCES=$(wildcard *.py) $(PROJECT) tests
 
 ifneq ($(OS),Windows_NT)
