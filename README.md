@@ -3,7 +3,7 @@
 <!-- Answer elevator-pitch questions about the extension – What is it? What does it do? What
 essential problem does it solve? -->
 
-hello-ext provides a Sphinx directive that generates a custom greeting.
+hello-ext adds a Sphinx directive that generates a custom greeting.
 
 ## Basic usage
 

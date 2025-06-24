@@ -41,10 +41,10 @@ running:
 make lint
 ```
 
-This process can be made easier by configuring your preferred text editor to highlight
+This process can be streamlined by configuring your preferred text editor to highlight
 ruff, pyright, and mypy errors.
 
-Lastly, all extensions expected to be well-tested. Once you have either migrated
+Lastly, all extensions are expected to be well-tested. Once you have either migrated
 existing tests or written new ones, they can be run with:
 
 ```bash
