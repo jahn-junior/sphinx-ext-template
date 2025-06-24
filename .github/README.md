@@ -59,7 +59,7 @@ make test-coverage
 
 Once everything passes, the extension's migration is complete.
 
-## Publishing
+## Publish the extension
 
 To publish your extension, you'll first need to configure trusted publishing on PyPI by
 following [these
