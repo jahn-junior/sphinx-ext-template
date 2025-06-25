@@ -34,15 +34,15 @@ If the extension previously used a build tool other than uv, you'll need to add 
 dependencies to `pyproject.toml` by running `uv add <package-name>` in the project's
 root directory.
 
-Next, you'll need to make the code comply with the template's linters. Start by
-running:
+Next, you'll need to make the code comply with the template's linters. In your
+terminal, run:
 
 ```bash
 make lint
 ```
 
-This process can be streamlined by configuring your preferred text editor to highlight
-ruff, pyright, and mypy errors.
+Resolve any errors listed in the output. This process can be streamlined by configuring
+your preferred text editor to highlight ruff, pyright, and mypy errors.
 
 Lastly, all extensions are expected to be well-tested. Once you have either migrated
 existing tests or written new ones, they can be run with:
