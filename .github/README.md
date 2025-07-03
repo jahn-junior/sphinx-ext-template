@@ -29,7 +29,8 @@ README if left intact.
 ## Migrate an extension
 
 Due to the limited size of most extensions, the easiest way to migrate the code is by
-transplanting it into a new [repository created from this template]().
+transplanting it into a new [repository created from this
+template](#create-an-extension).
 
 If the extension previously used a build tool other than uv, add any dependencies to
 `pyproject.toml` by running `uv add <package-name>` in the project's root directory.
