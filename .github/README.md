@@ -3,16 +3,15 @@
 This repository is a template for Canonical's Sphinx extensions. It provides useful
 boilerplate and tools for linting, testing, and publishing Sphinx extensions.
 
-## Create a new extension
+## Create an extension
 
-When creating a new Sphinx extension, [use this
-template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-to create your repository.
+When creating an extension, start by [creating a GitHub repository from this
+template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-Once the repository has been created, begin by updating the top-level README and
-CONTRIBUTING templates.
+Once the repository has been created, update the top-level README and CONTRIBUTING
+templates to better reflect your extension.
 
-Next, replace any references to the placeholder extension, `hello_ext`, in the following
+Next, replace any references to the placeholder `hello_ext` extension, in the following
 files:
 
 - `pyproject.toml`
@@ -21,31 +20,31 @@ files:
 - `tests/unit/`
 - `tests/integration/`
 
+Note the difference between the project name, `hello-ext`, and the module name,
+`hello_ext`. This difference is intentional and must be preserved in your new extension.
+
 Finally, delete `.github/README.MD`, as it will take precedence over your top-level
 README if left intact.
 
-## Migrate an existing extension
+## Migrate an extension
 
 Due to the limited size of most extensions, the easiest way to migrate the code is by
-transplanting it into a new repository created from this template. Before moving
-forward, follow the steps above to create this new repository.
+transplanting it into a new [repository created from this template]().
 
-If the extension previously used a build tool other than uv, you'll need to add any
-dependencies to `pyproject.toml` by running `uv add <package-name>` in the project's
-root directory.
+If the extension previously used a build tool other than uv, add any dependencies to
+`pyproject.toml` by running `uv add <package-name>` in the project's root directory.
 
-Next, you'll need to make the code comply with the template's linters. In your
-terminal, run:
+Next, make the code comply with the template's linters. In your terminal, run:
 
 ```bash
 make lint
 ```
 
-Resolve any errors listed in the output. This process can be streamlined by configuring
-your preferred text editor to highlight ruff, pyright, and mypy errors.
+Resolve any errors listed in the output. You can streamline this process by configuring
+your text editor to highlight ruff, pyright, and mypy errors.
 
 Lastly, all extensions are expected to be well-tested. Once you have either migrated
-existing tests or written new ones, they can be run with:
+existing tests or written new ones, run the full testing suite with:
 
 ```bash
 make test
@@ -61,12 +60,13 @@ Once everything passes, the extension's migration is complete.
 
 ## Publish the extension
 
-To publish your extension, you'll first need to configure trusted publishing on PyPI by
+To publish your extension, first configure trusted publishing on PyPI by
 following [these
 instructions](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/#configuring-trusted-publishing).
 
-Once that's done, GitHub actions will pack the extension and publish it to PyPI whenever
-you push a [semantic versioning](https://semver.org/) tag.
+Once that's done, push a signed [semantic versioning](https://semver.org/) tag to
+publish the extension to PyPI. For example, if you were release version 1.2.3 of the
+extension, you would run:
 
 ```bash
 git tag -s -m "Release 1.2.3" "1.2.3"
