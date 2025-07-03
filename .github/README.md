@@ -44,7 +44,7 @@ make lint
 Resolve any errors listed in the output. You can streamline this process by configuring
 your text editor to highlight ruff, pyright, and mypy errors.
 
-Lastly, all extensions are expected to be well-tested. Once you have either migrated
+All extensions are expected to be well-tested. Once you have either migrated
 existing tests or written new ones, run the full testing suite with:
 
 ```bash
