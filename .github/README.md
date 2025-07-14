@@ -21,7 +21,8 @@ files:
 - `tests/integration/`
 
 Note the difference between the project name, `hello-ext`, and the module name,
-`hello_ext`. This difference is intentional and must be preserved in the new extension.
+`hello_ext`. Due to Python's naming conventions, this pattern must be preserved in the
+new extension.
 
 Finally, delete `.github/README.md`, as it will take precedence over your top-level
 README if left intact.
