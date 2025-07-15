@@ -45,12 +45,12 @@ help: ## Show this help.
 		}
 	}'
 
-.PHONY: setup
-setup: install-uv setup-precommit install-build-deps ## Set up a development environment
+.PHONY: install
+install: install-uv install-precommit install-build-deps ## Set up a development environment
 	uv sync $(UV_TEST_GROUPS) $(UV_LINT_GROUPS)
 
-.PHONY: setup-precommit
-setup-precommit: install-uv  ##- Set up pre-commit hooks in this repository.
+.PHONY: install-precommit
+install-precommit: install-uv  ##- Set up pre-commit hooks in this repository.
 ifeq ($(shell which pre-commit),)
 	uv tool run pre-commit install
 else
@@ -188,7 +188,7 @@ ifneq ($(CI),)
 	@echo ::endgroup::
 endif
 
-# Below are intermediate targets for setup. They are not included in help as they should
+# Below are intermediate targets for install. They are not included in help as they should
 # not be used independently.
 
 .PHONY: install-uv

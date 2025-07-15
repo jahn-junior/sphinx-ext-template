@@ -39,6 +39,7 @@ If the extension previously used a build tool other than uv, add any dependencie
 Next, make the code comply with the template's linters. In your terminal, run:
 
 ```bash
+make install
 make lint
 ```
 

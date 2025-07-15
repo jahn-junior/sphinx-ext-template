@@ -53,7 +53,7 @@ Inside the project directory, set up the virtual development environment and ins
 dependencies, linters, and testers:
 
 ```bash
-make setup
+make install
 make lint
 make test
 ```
@@ -86,7 +86,7 @@ changes on.
 ```bash
 git checkout main
 git pull
-make setup
+make install
 ```
 
 Next, create a new branch against your chosen base. The new branch name should be brief,
@@ -154,8 +154,8 @@ done browsing, press `Q` to exit the interactive log.
 > - docs
 > - chore
 
-Committing triggers the pre-commit hook, which runs the automatic code formatter and the
-fast linters.
+Committing triggers the [pre-commit](https://pre-commit.com/) hook, which runs the
+automatic code formatter and the fast linters.
 
 If the linters reformatted any of the files, the commit was cancelled. To make the
 changes stick, restage the modified files with `git add -A` and commit again.
@@ -183,7 +183,7 @@ code. In such cases, it's best to delete your virtual environment and start over
 ```bash
 rm -rf .venv
 make clean
-make setup
+make install
 ```
 
 ### Push the branch and open a PR
