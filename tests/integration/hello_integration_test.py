@@ -28,7 +28,7 @@ def example_project(request) -> Path:
     example_dir = project_root / "tests/integration/example"
 
     target_dir = Path().resolve() / "example"
-    shutil.copytree(example_dir, target_dir)
+    shutil.copytree(example_dir, target_dir, dirs_exist_ok=True)
 
     return target_dir
 
@@ -41,8 +41,12 @@ def test_hello_integration(example_project):
     )
 
     index = build_dir / "index.html"
+
+    # Rename the test output to something more meaningful
+    shutil.copytree(build_dir, build_dir.parents[1] / ".test_output")
     soup = bs4.BeautifulSoup(index.read_text(), features="lxml")
-    shutil.rmtree(example_project)
+
+    shutil.rmtree(example_project)  # Delete copied source
 
     ext_text = soup.find("p")
     if ext_text:
