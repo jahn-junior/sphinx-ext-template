@@ -46,8 +46,11 @@ help: ## Show this help.
 	}'
 
 .PHONY: install
-install: install-uv install-precommit install-build-deps ## Set up a development environment
+install: install-uv install-linters install-precommit install-build-deps ## Set up a development environment
 	uv sync $(UV_TEST_GROUPS) $(UV_LINT_GROUPS)
+
+.PHONY: install-linters
+install-linters: install-uv install-shellcheck install-pyright install-lint-build-deps
 
 .PHONY: install-precommit
 install-precommit: install-uv  ##- Set up pre-commit hooks in this repository.
